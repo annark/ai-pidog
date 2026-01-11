@@ -1,0 +1,8 @@
+# Ignore captured images
+*.jpg
+*.jpeg
+ollama_objects/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
