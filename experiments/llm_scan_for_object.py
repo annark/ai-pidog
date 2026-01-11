@@ -1,3 +1,4 @@
+from pathlib import Path
 import time
 import requests
 import base64
@@ -6,7 +7,12 @@ from vilib import Vilib
 
 # --- CONFIG ---
 MAC_IP = "192.168.1.112"
-PHOTO_PATH = "scan_capture.jpg"
+script_dir = Path(__file__).parent.resolve()
+target_dir = script_dir.parent / "ollama_objects"
+target_dir.mkdir(parents=True, exist_ok=True)
+filename = "scan_for_object_capture"
+photo_path = target_dir / f"{filename}.jpg"
+
 # Zones: Left, Center, Right (Head Yaw angles)
 SCAN_ZONES = [-50, 0, 50]
 

@@ -27,13 +27,13 @@ def remote_recognize():
     # 2. Scanning Routine
     print("Scanning for object...")
     # Head move: [[yaw, roll, pitch]]
-    dog.head_move([[0, 0, 0]], speed=80) 
+    dog.head_move([[0, 0, 0]], speed=80)
     dog.wait_all_done()
     time.sleep(0.5)
 
     # 3. Take the photo
     directory = '/home/arkarkark/ollama_objects'
-    filename = 'object_capture'
+    filename = 'object_recognize'
     photo_path = Path(directory) / f"{filename}.jpg"  # The / operator joins the strings
     Vilib.take_photo(photo_name=filename, path=directory)
     print(f"Photo captured to {photo_path}!")

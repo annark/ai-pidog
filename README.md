@@ -34,7 +34,7 @@ pip install -r requirements.txt
 Configuration Tip: Open your scripts and update the MAC_IP variable to match the local IP address of your Mac (e.g., 192.168.1.XX).
 
 ## Usage
-These scripts are run from this repo when connected via SSH to the pidog.
+These scripts are run from `experiments` directory of this repo, when connected via SSH to the pidog.
 
 ### Object Recognition
 This script captures one frame from the Pi camera and prints the AI's description to the terminal.
@@ -50,7 +50,7 @@ sudo python3 llm_ollama_search_for_object.py
 ### Object Search From Voice Command
 The dog will ask what it should look for, then move its head to see if it spots the object.
 ```
-sudo python3 llm_scan_for_object.py.py
+sudo python3 llm_scan_for_object.py
 ```
 
 ## Project Structure & customizations
