@@ -1,7 +1,7 @@
-# 🐶 PiDog AI: Object Recognition & Search
+# PiDog AI: Object Recognition & Search
 This repository contains experimental scripts for the SunFounder PiDog 2, integrating local AI processing via Ollama on a Mac to give the robot "eyes" and decision-making capabilities.
 
-## 🌟 Overview
+## Overview
 The project currently features two main experiments:
 
 Object Recognition: The dog captures an image, sends it to a Mac running moondream, and receives a description of what it sees.
@@ -14,7 +14,7 @@ Object Search: A loop where the dog rotates its head, looks for a specific objec
 - [SunFounder PiDog Robot Kit](https://sunfounder.com)
 - Mac or PC (connected to the same Wi-Fi, running Ollama as the AI server)
 
-## 🚀 Setup & Installation
+## Setup & Installation
 ### 1. PiDog Environment
 Ensure you have the official SunFounder libraries installed on your Pi by following the official [SunFounder Quick Guide](https://docs.sunfounder.com/projects/pidog/en/latest/python/python_start/quick_guide_on_python.html).
 
