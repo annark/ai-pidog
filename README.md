@@ -19,7 +19,7 @@ Object Search: A loop where the dog rotates its head, looks for a specific objec
 Ensure you have the official SunFounder libraries installed on your Pi by following the official [SunFounder Quick Guide](https://docs.sunfounder.com/projects/pidog/en/latest/python/python_start/quick_guide_on_python.html).
 
 ### 2. Local Ollama AI Server
-- Download the [Ollama App](https://ollama.com/).
+- Download & install the [Ollama App](https://ollama.com/).
 - Pull the vision model: `ollama pull moondream`
 - Expose the server to your local network so the Pi can reach it:
 `OLLAMA_ORIGINS="*" OLLAMA_HOST=0.0.0.0 ollama serve`
@@ -36,21 +36,24 @@ Configuration Tip: Open your scripts and update the MAC_IP variable to match the
 ## Usage
 These scripts are run from this repo when connected via SSH to the pidog.
 
-### Running Object Recognition
+### Object Recognition
 This script captures one frame from the Pi camera and prints the AI's description to the terminal.
 ```
 sudo python3 llm_ollama_object_recognize.py
 ```
 
-### Running Object Search
+### Object Search
 The dog will scan its environment by moving its head. Once the AI identifies the target object, the dog will stop scanning.
 ```
 sudo python3 llm_ollama_search_for_object.py
 ```
+### Object Search From Voice Command
+The dog will ask what it should look for, then move its head to see if it spots the object.
+```
+sudo python3 llm_scan_for_object.py.py
+```
 
 ## Project Structure & customizations
-- `llm_ollama_object_recognize.py`: Basic vision-to-text script.
-- `llm_ollama_search_for_object.py`: Search loop and head-movement logic.
 - `.gitignore`: Prevents captured .jpg files from cluttering the repo.
 - `requirements.txt`: Necessary Python dependencies.
 
